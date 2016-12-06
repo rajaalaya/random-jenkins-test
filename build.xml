@@ -1,0 +1,16 @@
+<project name ="random-jenkins-test">
+         <target name="info" depends="show_version">
+              <echo>Hello world</echo>
+</target>
+
+         <target name="show_version" depends="test">
+              <echo>${ant.version}</echo>
+</target>
+
+         <target name="test">
+              <exec executable="uname">
+                     <arg value="-a"/>
+                      </exec>
+</target>
+</project>
+
